@@ -1,0 +1,9 @@
+input{
+    border : 4px solid blanchedalmond;
+    border-radius: 20px;
+}
+
+input[type="number"]{
+    border : 4px solid blue;
+}
+

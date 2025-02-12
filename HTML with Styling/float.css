@@ -1,0 +1,15 @@
+.float-left{
+    float : left;
+    margin : 0px 15px 0px 0px;
+    /* margin-left: 10px; */
+}
+
+.float-right{
+    float : right;
+    /* margin-right: 10px; */
+}
+
+/* img{
+    width: 100px;
+    height: 100px;
+} */

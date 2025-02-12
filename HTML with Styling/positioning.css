@@ -1,0 +1,48 @@
+/* .div-pos-2{
+    border: green 2px solid;
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.content-pos{
+    position: absolute;
+
+}
+.relative-pos{
+    background-color:aqua;
+    position: relative;
+    top: 22px;
+    left: 50px;
+}   
+
+.relative-pos-2{
+    background-color: blueviolet;
+    position: relative;
+}
+
+.relative-pos-3{
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.div-pos{
+    background-color: red;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+
+} */
+
+.rel-pos{
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+
+.abs-pos{
+    position: absolute;
+    left: 500px;
+    top: 50px;  
+}
