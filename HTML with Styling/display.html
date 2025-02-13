@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Properties</title>
     <style>
-        li{
-            display: inline-block;;
+        ol {
+            list-style : none;
+            padding: 0;
+            margin: 0;
+            counter-reset: item;
+        }
+
+        li {
+            display: inline;
+        }
+
+        li::before {
+            content: counters(item, ".") ". ";
+            counter-increment: item;
         }
     </style>
 </head>
@@ -21,8 +30,8 @@
         <li>grid</li>
     </ol>
     <h1>This is an Block element </h1>
-    <span class="background-color : grey; color : grey;" >This is an Inline element</span>
-    <span>This is an Inline element</span>
+    <span class="background-color : grey; color : grey;" >This is an Inline element a span tag</span>
+    <span>This is an Inline element a span tag</span>
     <h1>this is an h1 tags</h1>
 </body>
 </html>
