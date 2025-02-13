@@ -9,6 +9,11 @@
     /* margin-right: 10px; */
 }
 
+.float-center{
+    float : inline-end;
+    /* margin-right: 10px; */
+}
+
 img {
     display: block;
     width : 500px;
