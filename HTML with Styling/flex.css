@@ -28,7 +28,7 @@ a:hover{
 }
 
 .dropdown {
-    color: blue;
+    color: black;
     position: relative; /* Needed for absolute positioning of the dropdown */
 }
 .dropdown-menu {
@@ -52,4 +52,5 @@ a:hover{
 
 .dropdown:hover + .dropdown-menu, .dropdown-menu:hover {
             display: block;
+            position: relative;
 }
