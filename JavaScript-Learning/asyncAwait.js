@@ -12,12 +12,73 @@ async function asAw(){
 
 
 async function asAw1 () {
+    var a = 10;
     setTimeout(() => {
         console.log('Inside setTimeout');
     }, 5000);
 
+    console.log(await a);
+
 }
 
-console.log('End');
-asAw1();
-console.log('End');
+
+// // Instagram clone using Async Await
+
+// async function postCode() {
+//     post = new Promise((posted) => {
+//         return setTimeout(() => {
+//             posted("Posted Successfully");
+//         }, 1000);
+//     })
+//     return post;
+// }
+// postCode().then((msg)=> {
+//     console.log(msg);
+// }).catch((err)=>{
+//     console.log(err);
+// });
+
+
+// Instagram console demo for post like comment share
+
+likeCode = async () => {
+    return new Promise((likePost)=>{
+        setTimeout(()=>{
+            likePost('liked the post successfully');
+        }, 5000);
+    });
+}
+commentCode = async () => {
+    return new Promise((commentPost)=>{
+        setTimeout(()=>{
+            commentPost('commented the post successfully');
+        }, 5000);
+    });
+}
+shareCode = async () => {
+    return new Promise((sharePost)=>{
+        setTimeout(()=>{
+            sharePost('shared the post successfully');
+        }, 5000);
+    });
+}
+
+async function postCode(){
+    var post = new Promise((posted) => {
+        setTimeout(() => {
+            posted('posted the post successfully');
+        }, 5000);
+    });
+    // console.log(await post);
+    // console.log(await likeCode());
+    // console.log(await commentCode());
+    // console.log(await shareCode());
+
+    const [Post, like, comment, share] = await Promise.all([post, likeCode(), commentCode(), shareCode()]);
+    console.log(Post);
+    console.log(like);
+    console.log(comment);
+    console.log(share);
+}
+
+postCode();
