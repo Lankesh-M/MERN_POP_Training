@@ -51,3 +51,6 @@ new Promise((resolve, reject) => {
     console.log(error);
 });
 
+// Tasks : Document types \/
+//         Create another five component \/
+//         Promise Practise \/

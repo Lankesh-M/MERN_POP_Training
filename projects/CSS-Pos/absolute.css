@@ -1,0 +1,21 @@
+body {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .item-1 {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    z-index: 8;
+  }
+/* 
+  .item-3 {
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    z-index: 10;
+  } */

@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    text-decoration: none;
+}                   
+
+
+nav{
+    display: flex;
+    list-style-type: none;
+    background-color: chocolate;
+    justify-content: space-evenly;
+    padding: 8  px;
+    font-size: 20px;
+}

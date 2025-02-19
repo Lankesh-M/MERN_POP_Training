@@ -65,7 +65,7 @@ shareCode = async () => {
 
 async function postCode(){
     var post = new Promise((posted) => {
-        setTimeout(() => {
+        setTimeout(() => {  
             posted('posted the post successfully');
         }, 5000);
     });
