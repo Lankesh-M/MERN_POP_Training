@@ -27,6 +27,7 @@ export default Login;
 */
 
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({
@@ -66,6 +67,9 @@ const Login = () => {
         />
         <br />
         <button type="submit">Login</button>
+
+
+       <p>Don't have an Account? <Link to = {'/signup'}>Signup</Link></p> 
     </section>
   );
 };

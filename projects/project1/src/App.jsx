@@ -7,6 +7,9 @@ import Navbar from "./component/FunctionComponent/Navbar";
 import UseEffect from "./component/FunctionComponent/Hooks/UseEffects.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./component/FunctionComponent/login.jsx";
+import UseEffectApi from "./component/FunctionComponent/Hooks/UseEffectApi.jsx";
+import UseRef from "./component/FunctionComponent/Hooks/UseRef.jsx";
+import UseMemo from "./component/FunctionComponent/Hooks/UseMemo.jsx";
 function App() {
   return (
     <main>
@@ -17,6 +20,9 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/use-effect" element={<UseEffect />} />
+          <Route path="/use-ref" element={<UseRef />} />
+          <Route path="/use-memo" element={<UseMemo />} />
+          <Route path="/use-effect-api" element={<UseEffectApi />} />
           <Route path="/use-state" element=<h1>Replace this with useState Component</h1> />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />

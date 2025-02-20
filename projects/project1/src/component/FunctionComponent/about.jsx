@@ -11,7 +11,7 @@ function About(){
             <h2>Updated value is {num}</h2>
             <button onMouseMove={()=>setNum(num+1)}>Increment + </button>&nbsp;&nbsp;
             <button onMouseMove={()=>setNum(num-1)}>Decrement - </button>&nbsp;&nbsp;
-            {/* <button onClick={()=>setNum(initialVal)}>Reset</button> */}
+            <button onClick={()=>setNum(initialVal)}>Reset</button>
         </div>
     )
 }

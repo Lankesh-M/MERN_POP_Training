@@ -59,6 +59,7 @@ const Signup = () => {
       Email:
       <input
         type="email"
+        // value="@gmail.com"
         name="email"
         value={formData.email}
         onChange={handleChange}
