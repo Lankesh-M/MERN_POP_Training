@@ -10,10 +10,11 @@ const UseEffect = () => {
       Type your Text:{" "}
       <input
         type="text"
+        placeholder="Type here"
         value={text}
         onChange={(event) => setText(event.target.value)}
       />
-      <h1>{text}</h1>
+      <h1>You typed this :{text}    </h1>
     </section>
   );
 };
