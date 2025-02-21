@@ -38,11 +38,20 @@ const Navbar = () => {
           <li onClick={() => setShowList(false)}>
             <Link to="/use-effect-api">useEffectwithAPI</Link>
           </li>
+          <li onClick={() => setShowList(false)}>
+            <Link to="/use-callback">useCallBack</Link>
+          </li>
+          <li onClick={() => setShowList(false)}>
+            <Link to="/use-memoize">useMemoize</Link>
+          </li>
         </ol>
       )}
     </div>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/hoc">HoC</Link>
+          </li>
+          <li>
+            <Link to="/task">Memo</Link>
           </li>
           <li>
             <Link to="/signup">Signup</Link>
