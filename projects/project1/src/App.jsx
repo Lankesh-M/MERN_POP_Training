@@ -14,7 +14,8 @@ import UseCallback from "./component/FunctionComponent/Hooks/CustomHooks/UseCall
 import UseMemorize from "./component/FunctionComponent/Hooks/CustomHooks/UseMemorize.jsx";
 import UseMemoize from "./component/FunctionComponent/Hooks/CustomHooks/UseMemorize.jsx";
 import HOC from "./HOC/HoC.jsx";
-import Memo from "./component/FunctionComponent/Task/Memo.jsx";
+import Memo from "./component/FunctionComponent/Memoization/Memo.jsx";
+import LazyLoadingAndSuspense from "./component/FunctionComponent/Memoization/LazyLoadingAndSuspensse.jsx";
 function App() {
   return (
     <main>
@@ -30,7 +31,8 @@ function App() {
           <Route path="/use-effect-api" element={<UseEffectApi />} />
           <Route path="/use-callback" element={<UseCallback />} />
           <Route path="/use-memoize" element={<UseMemoize />} />
-          <Route path="/task" element={<Memo />} />
+          <Route path="/memo" element={<Memo />}/>
+          <Route path="/lazy" element={<LazyLoadingAndSuspense />}/>
           <Route path="/hoc" element={<HOC />} />
           <Route path="/use-state" element=<h1>Replace this with useState Component</h1> />
           <Route path="/contact" element={<Contact />} />
