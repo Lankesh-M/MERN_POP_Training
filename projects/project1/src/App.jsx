@@ -16,6 +16,7 @@ import UseMemoize from "./component/FunctionComponent/Hooks/CustomHooks/UseMemor
 import HOC from "./HOC/HoC.jsx";
 import Memo from "./component/FunctionComponent/Memoization/Memo.jsx";
 import LazyLoadingAndSuspense from "./component/FunctionComponent/Memoization/LazyLoadingAndSuspensse.jsx";
+import CoE from "./component/FunctionComponent/CoE.jsx";
 function App() {
   return (
     <main>
@@ -30,6 +31,7 @@ function App() {
           <Route path="/use-memo" element={<UseMemo />} />
           <Route path="/use-effect-api" element={<UseEffectApi />} />
           <Route path="/use-callback" element={<UseCallback />} />
+          <Route path="/res" element={<CoE />} />
           <Route path="/use-memoize" element={<UseMemoize />} />
           <Route path="/memo" element={<Memo />}/>
           <Route path="/lazy" element={<LazyLoadingAndSuspense />}/>

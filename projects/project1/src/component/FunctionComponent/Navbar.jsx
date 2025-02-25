@@ -92,6 +92,11 @@ const Navbar = () => {
           )}
         </div>
         <li>
+          <Link to="/res">
+            ContextAPI
+          </Link>
+        </li>
+        <li>
           <Link to="/hoc">HoC</Link>
         </li>
         <li>
