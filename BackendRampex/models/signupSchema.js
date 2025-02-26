@@ -6,6 +6,7 @@ const signupSchema = mdb.Schema(
         lastName : String,
         email : String,
         age : Number,
+        password : String,
     }
 )
 
