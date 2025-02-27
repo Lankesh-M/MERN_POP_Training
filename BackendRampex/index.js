@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/signup", async (req, res) => {
-  const { firstName, lastName, email, age, password} = req.body;
+  const { firstName, lastName, email, password} = req.body;
   console.log(firstName, lastName);
 
   try {
@@ -33,7 +33,7 @@ app.post("/signup", async (req, res) => {
       lastName: lastName,
       email : email,
       password : hashedPassword,
-      age : age
+      // age : age
     });
     newSignup.save();
     res.status(200).json(newSignup);
