@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/signup", async (req, res) => {
-  const { firstName, lastName, email, password} = req.body;
+  const { firstName, lastName, email, password, age} = req.body;
   console.log(firstName, lastName);
 
   try {
@@ -33,13 +33,14 @@ app.post("/signup", async (req, res) => {
       lastName: lastName,
       email : email,
       password : hashedPassword,
-      // age : age
+      age : age
     });
     newSignup.save();
-    res.status(200).json(newSignup);
+    console.log(newSignup);
+    res.status(200).json({message: "Signup success", isSignup : true});
   } catch (err) {
     console.error("Signup error:", err);
-    res.status(400).json({ msg: "Signup unsuccess", error: err.message });
+    res.status(400).json({ message: "Signup unsuccess", error: err.message, isSignup : false });
   }
 });
 
