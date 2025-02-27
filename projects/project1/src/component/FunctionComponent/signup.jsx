@@ -12,8 +12,8 @@ const  Signup = () => {
   const handleSignup = async (event) => {
     event.preventDefault();
     // const req = await axios.post("https://sjit2025mern.onrender.com/signup", {
-    const req = await axios.post("https://rampex-backend.onrender.com/signup", {
-    // const req = await axios.post("http://localhost:3002/signup", {
+    // const req = await axios.post("https://rampex-backend.onrender.com/signup", {
+    const req = await axios.post("http://localhost:3002/signup", {
       firstName: firstName,
       lastName: lastName,
       email: email,

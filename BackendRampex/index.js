@@ -4,12 +4,16 @@ const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const signup_schema = require("./models/signupSchema");
 const bcrypt = require('bcrypt');
+const cors = require('cors');
+
 
 dotenv.config();
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.use(express.json());
 
 console.log("MONGODB_URL:", process.env.MONGODB_URL);
 
