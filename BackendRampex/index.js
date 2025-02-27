@@ -65,12 +65,12 @@ app.post('/login', async (req, res) => {
       const isValidPass = await bcrypt.compare(password, isExistingUser.password);
       console.log(isValidPass)
       if(isValidPass){
-        return res.status(200).json({msg: "Login Successfully"})
+        return res.status(200).json({message: "Login Successfully", isLoggedIn:true})
       }else{
-       return  res.status(200).json({msg: "Incorrect Password"})
+       return  res.status(200).json({message: "Incorrect Password", isLoggedIn:false})
       }
     }else{
-       return res.status(400).json({msg:"User not Found Please Signin First"})
+       return res.status(400).json({message:"User not Found Please Signin First", isLoggedIn:false})
     }
   }catch(err){
     return  res.status(400).json({msg : "Erro occurred in Login"})

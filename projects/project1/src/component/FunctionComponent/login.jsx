@@ -1,77 +1,51 @@
-/*
-function Login(){
-    return(
-        <div>
-            <h1>Login Page</h1>
-        </div>
-    )
-}
-
-export default Login
-*/
-
-/*
-const Login=()=>{
-    return(
-        <div>
-            <h2>Login</h2>
-                <form action="">
-                    Email: <input type="text" />
-                    Password: <input type="password" />
-                    <button>Submit</button>
-                </form>
-        </div>
-    );
-}
-export default Login;
-*/
-
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
-  const [loginData, setLoginData] = useState({
-    email: "",
-    password: "",
-  });
-
-  useEffect(() => {
-    console.log("Login Data:", loginData);
-  }, [loginData]);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setLoginData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    var req = await axios.post("https://rampex-backend.onrender.com/login", {
+      email,
+      password,
+    });
+    var isLoginSuccessful = req.data.isLoggedIn;
+    if (isLoginSuccessful) {
+      alert(req.data.message);
+      navigate("/");
+    } else {
+      alert(req.data.message);
+    }
   };
-
   return (
     <section>
-      <h1>LOGIN FORM</h1>
-        Email:
+    <form onSubmit={handleLogin}>
+        Email:{" "}
         <input
           type="email"
-          name="email"
-          value={loginData.email}
-          onChange={handleChange}
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
         />
-        <br />
-        Password:
+        <br /> <br />
+        Password:{" "}
         <input
           type="password"
-          name="password"
-          value={loginData.password}
-          onChange={handleChange}
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
         />
-        <br />
+        <br /><br />
         <button type="submit">Login</button>
-
-
-       <p>Don't have an Account? <Link to = {'/signup'}>Signup</Link></p> 
+      </form>
+      <p>Create an account?<Link to='/signup'>Signup</Link></p>
     </section>
   );
-};
-
+}
 export default Login;
